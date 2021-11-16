@@ -1,3 +1,4 @@
+// Код Ravesli
 #include <glad/glad.h> 
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -34,9 +35,6 @@ int main()
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-
-    
-
     
     // Цикл рендеринга
 
@@ -48,6 +46,12 @@ int main()
         // Выполнение команд рендеринга
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        glBegin(GL_TRIANGLES);
+        glVertex2f(-0.5f,-0.5f);
+        glVertex2f(0.0f, 0.5f);
+        glVertex2f(0.5f, -0.5f);
+        glEnd();
 
         // Перемена буферов
         glfwSwapBuffers(window);
